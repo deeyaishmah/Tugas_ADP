@@ -15,21 +15,6 @@ def input_data():
         i = i + 1
     return data
 
-def hitung_rata_preposttugas(data):
-    total_pre = 0
-    total_post = 0
-    total_tugas = 0
-    i = 0
-    while i < len(data):
-        total_pre = total_pre + data[i][2]
-        total_post = total_post + data[i][3]
-        total_tugas = total_tugas + data[i][4]
-        i = i + 1
-    rata_pre = total_pre / len(data)
-    rata_post = total_post / len(data)
-    rata_tugas = total_tugas / len(data)
-    return rata_pre, rata_post, rata_tugas
-
 def hitung_nilai_akhir(data):
     i = 0
     while i < len(data):
@@ -90,7 +75,6 @@ def tampilkan_tabel(data, rata_akhir):
 
 # Program utama
 praktikan_data = input_data()
-rata_pre, rata_post, rata_tugas = hitung_rata_preposttugas(praktikan_data)
 hitung_nilai_akhir(praktikan_data)
 urutkan_dan_peringkat(praktikan_data)
 rata_akhir = hitung_rata_nilai_akhir(praktikan_data)
